@@ -184,27 +184,69 @@ function get_the_forms_data(){
 		}
 		
 	// ________________________________________________________________________________________________________ 		
-		if(isset($MiM_post_meta_array['صور_ماقبل_الإجراء'])){
+		/*if(isset($MiM_post_meta_array['صور_ماقبل_الإجراء'])){
 			//this mean the user entered a value for this field so we need to assign it to the display array
 			// 
 			//$display_field_array['صورة مابعد الاجراء'] = $MiM_post_meta_array['featured_image'][0];
 			//This is an image and I am not sure how it is saved in the database
 			$display_field_array['صورة ما قبل الاجراء'] = wp_get_attachment_image( $MiM_post_meta_array['صور_ماقبل_الإجراء'][0]);
+		}*/
+		if(isset($MiM_post_meta_array['صور_ماقبل_الإجراء'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['صور_ماقبل_الإجراء'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['صور_ماقبل_الإجراء'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة ما قبل الاجراء'] =$html_a_tag;
 		}
 	
 	
-		if(isset($MiM_post_meta_array['صورة_اضافية'])){
+		/*if(isset($MiM_post_meta_array['صورة_اضافية'])){
 			$display_field_array['صورة اضافية'] = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية'][0]);
+		}*/
+		if(isset($MiM_post_meta_array['صورة_اضافية'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['صورة_اضافية'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة اضافية'] =$html_a_tag;
 		}
-	    if(isset($MiM_post_meta_array['صورة_اضافية_ثانية'])){
+		
+	
+	    /*if(isset($MiM_post_meta_array['صورة_اضافية_ثانية'])){
 			$display_field_array['صورة اضافية ثانية'] = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_ثانية'][0]);
+		}*/
+		if(isset($MiM_post_meta_array['صورة_اضافية_ثانية'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['صورة_اضافية_ثانية'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_ثانية'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة اضافية ثانية'] =$html_a_tag;
 		}
-     	if(isset($MiM_post_meta_array['صورة_اضافية_ثالثة'])){
+	
+     	/*if(isset($MiM_post_meta_array['صورة_اضافية_ثالثة'])){
 			$display_field_array['صورة اضافية ثالثة'] = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_ثالثة'][0]);
+		}*/
+		
+		if(isset($MiM_post_meta_array['صورة_اضافية_ثالثة'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['صورة_اضافية_ثالثة'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_ثالثة'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة اضافية ثالثة'] =$html_a_tag;
 		}
-	    if(isset($MiM_post_meta_array['صورة_اضافية_رابعة'])){
+	
+	    /*if(isset($MiM_post_meta_array['صورة_اضافية_رابعة'])){
 			$display_field_array['صورة اضافية رابعة'] = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_رابعة'][0]);
+		}*/
+		
+		if(isset($MiM_post_meta_array['صورة_اضافية_رابعة'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['صورة_اضافية_رابعة'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['صورة_اضافية_رابعة'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة اضافية رابعة'] =$html_a_tag;
 		}
+	
 
 	
 		
@@ -259,12 +301,20 @@ function get_the_forms_data(){
 	// 
 	// 
 	// ________________________________________________________________________________________________________ 		
-		if(isset($MiM_post_meta_array['featured_image'])){
+		/*if(isset($MiM_post_meta_array['featured_image'])){
 			//this mean the user entered a value for this field so we need to assign it to the display array
 			// 
 			//$display_field_array['صورة مابعد الاجراء'] = $MiM_post_meta_array['featured_image'][0];
 			//This is an image and I am not sure how it is saved in the database
 			$display_field_array['صورة مابعد الاجراء'] = wp_get_attachment_image( $MiM_post_meta_array['featured_image'][0]);
+		}*/
+	
+		if(isset($MiM_post_meta_array['featured_image'])){
+			$image_url = wp_get_attachment_image_src($MiM_post_meta_array['featured_image'][0], 'full');
+			$html_img_tag = wp_get_attachment_image( $MiM_post_meta_array['featured_image'][0]);
+			$html_a_tag = '<a href="'.$image_url[0].'">'.$html_img_tag.'</a>';
+			
+			$display_field_array['صورة مابعد الاجراء'] =$html_a_tag;
 		}
 	
 	// ________________________________________________________________________________________________________ 		
