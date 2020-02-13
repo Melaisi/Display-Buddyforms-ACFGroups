@@ -1,2 +1,2 @@
 # Display-Buddyforms-ACFGroups
-A WordPress plugin to display fields created by Advance Custom Fields plugin and BuddyForms plugin. 
+A WordPress plugin to display fields created by the Advanced Custom Fields plugin and BuddyForms plugin. This plugin is created for a specific website and written in a basic format to allow the non-programmer to edit and modify things easily.  The need for this plugin is in response to an issue of displaying the ACF fields after adding them to a form created by BuddyForm plugin and linked by BuddyForms Advanced Custom Fields plugin. 
